@@ -1,5 +1,6 @@
 const express = require("express");
 const usuarioRoutes = require("./routes/usuarioRoutes");
+const atividadeRoutes = require("./routes/atividadeRoutes");
 
 const app = express();
 
@@ -10,5 +11,7 @@ app.get("/health", (req, res) => {
 });
 
 app.use("/usuarios", usuarioRoutes);
+app.use("/atividades", atividadeRoutes);
 
+module.exports = app;
 module.exports = app;
